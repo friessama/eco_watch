@@ -1,4 +1,5 @@
 <template>
+  <SignupPage />
   <SideNavBar>
     <div class="flex flex-col w-full">
       <TopNavBar />
@@ -78,4 +79,7 @@ import PollutionBars from './components/PollutionBars.vue'
 import AirComposition from './components/AirComposition.vue'
 import ImpressionStats from './components/ImpressionStats.vue'
 import UserProfile from './components/UserProfile.vue'
+import SignupPage from './components/SignupPage.vue'
+import LoginPage from './components/LoginPage.vue'
+import ForgotPasswordPage from './components/ForgotPassword.vue'
 </script>
