@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-xl rounded-2xl p-8 w-300 max-w-4xl mx-auto h-[500px] overflow-y-auto">
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-300 max-w-4xl mx-auto h-[800px] overflow-y-auto">
     <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-3">Location Statistics</h2>
     <div class="grid grid-cols-1 gap-4">
       <div

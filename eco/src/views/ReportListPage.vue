@@ -71,7 +71,7 @@
     class="bg-purple-600 text-white rounded-full w-14 h-14 shadow-md hover:bg-purple-700 flex items-center justify-center text-xl"
     title="Add New Report"
   >
-    <i class="pi pi-plus text-4xl"></i>
+    <i class="pi pi-plus text-4xl">+</i>
   </button>
       </div>
     </div>

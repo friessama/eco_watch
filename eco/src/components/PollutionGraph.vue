@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-white shadow rounded-lg p-4">
+  <div class="bg-white shadow-xl rounded-lg p-4">
     <h2 class="text-4xl font-semibold text-gray-800 mb-2">Pollution Levels (PM2.5)</h2>
     <p class="text-sm text-gray-500 mb-4">Last 12 months data</p>
 
-    <LineChart :chart-data="chartData" :chart-options="chartOptions" class="h-80" />
+    <LineChart :chart-data="chartData" :chart-options="chartOptions" class="h-140" />
     
     <div class="mt-4 text-xl text-gray-500 flex justify-between">
       <span>Good: 0-12</span>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow rounded-4xl px-4 py-10 text-center w-60">
+  <div class="bg-white shadow-xl m-6 rounded-4xl px-4 py-10 text-center w-60">
     <!-- Weather Icon from URL -->
     <img
       :src="icon"

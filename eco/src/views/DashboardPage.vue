@@ -1,69 +1,52 @@
 <template>
   <SideNavBar>
-    <div class="flex flex-col w-full">
-      <TopNavBar class="m-8"/>
-        <!-- Heatmap Section -->
-        <div class="col-span-12 h-[800px] m-4">
+    <div class="flex flex-col w-full min-h-screen">
+      <!-- Top Nav -->
+      <TopNavBar class="p-4 w-full" />
+
+      <div class="flex flex-col flex-1 p-4 space-y-4">
+        <!-- Heatmap Section (full width) -->
+        <div class="w-full h-[800px]">
           <HeatMap class="w-full h-full" />
         </div>
-      <div class="grid grid-cols-12 gap-4 p-4">
-        <!-- Weather Forecast -->
-        <div class="col-span-12 flex justify-between items-center space-x-4 overflow-x-auto py-2">
-          <WeatherCard day="Fri" temperature="16" condition="sunny" icon="https://openweathermap.org/img/wn/01d@2x.png" />
-          <WeatherCard day="Sat" temperature="10" condition="rain" icon="https://openweathermap.org/img/wn/10d@2x.png" />
-          <WeatherCard day="Sun" temperature="15" condition="cloudy" icon="https://openweathermap.org/img/wn/03d@2x.png" />
-          <WeatherCard day="Mon" temperature="11" condition="snow" icon="https://openweathermap.org/img/wn/13d@2x.png" />
-          <WeatherCard day="Tue" temperature="10" condition="rain" icon="https://openweathermap.org/img/wn/10d@2x.png" />
-          <WeatherCard day="Wed" temperature="12" condition="snow" icon="https://openweathermap.org/img/wn/13d@2x.png" />
-          <WeatherCard day="Thu" temperature="10" condition="cloudy" icon="https://openweathermap.org/img/wn/04d@2x.png" />
+
+        <!-- Weather Forecast (scrollable row) -->
+        <div class="w-full overflow-x-auto flex -space-x-4 gap-40 justify-center items-center">
+          <WeatherCard v-for="day in days" :key="day.day" v-bind="day" />
         </div>
 
-        <div class="flex flex-row col-span-12 gap-8 justify-center items-center m-10">
-          <div class="">
-            <LocationStats />
-          </div>
-          <div class="">
-            <PollutionGraph class="w-full h-full" />
-          </div>
+        <!-- Main Stats & Graphs -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-40">
+          <LocationStats class="" />
+          <PollutionGraph class="" />
         </div>
 
-        <div class="flex flex-row col-span-12 gap-4 justify-center items-center m-10">
-          <div class="col-span-3">
-            <WindStatus />
-          </div>
-          <div class="col-span-3">
-            <UVIndex />
-          </div>
-          <div class="col-span-3">
-            <PollutionBars />
-          </div>
+        <!-- Wind, UV, Pollution -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <WindStatus class="w-full" />
+          <UVIndex class="w-full" />
+          <PollutionBars class="w-full" />
         </div>
 
-        <div class="flex flex-row col-span-12 gap-4 justify-center items-center m-10">
-          <div class="col-span-3 h-[160px]">
-            <Humidity />
-          </div>
-          <div class="col-span-3 h-[160px]">
-            <Visibility />
-          </div>
-          <div class="col-span-3 h-[160px]">
-            <PollutionBars />
-          </div>
+        <!-- Humidity, Visibility, Additional Pollution -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Humidity class="w-full" />
+          <Visibility class="w-full" />
+          <PollutionBars class="w-full" />
         </div>
 
-        <div class="flex flex-row col-span-12 gap-4 justify-center items-center m-10 py-20">
-          <div class="col-span-3 h-[160px]">
-            <AirComposition />
-          </div>
-          <div class="col-span-3 h-[160px]">
-            <ImpressionStats />
-          </div>
-          <div class="col-span-3 h-[160px]">
-            <AirComposition />
-          </div>
+        <!-- Air Composition & Impressions -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <AirComposition class="w-full" />
+          <ImpressionStats class="w-full" />
+          <AirComposition class="w-full" />
+        </div>
+
+        <!-- User Profile -->
+        <div class="w-full">
+          <UserProfile />
         </div>
       </div>
-      <UserProfile />
     </div>
   </SideNavBar>
 </template>
@@ -83,8 +66,18 @@ import PollutionBars from '../components/PollutionBars.vue';
 import AirComposition from '../components/AirComposition.vue';
 import ImpressionStats from '../components/ImpressionStats.vue';
 import UserProfile from '../components/UserProfile.vue';
+
+const days = [
+  { day: 'Fri', temperature: '16', condition: 'sunny', icon: 'https://openweathermap.org/img/wn/01d@2x.png' },
+  { day: 'Sat', temperature: '10', condition: 'rain', icon: 'https://openweathermap.org/img/wn/10d@2x.png' },
+  { day: 'Sun', temperature: '15', condition: 'cloudy', icon: 'https://openweathermap.org/img/wn/03d@2x.png' },
+  { day: 'Mon', temperature: '11', condition: 'snow', icon: 'https://openweathermap.org/img/wn/13d@2x.png' },
+  { day: 'Tue', temperature: '10', condition: 'rain', icon: 'https://openweathermap.org/img/wn/10d@2x.png' },
+  { day: 'Wed', temperature: '12', condition: 'snow', icon: 'https://openweathermap.org/img/wn/13d@2x.png' },
+  { day: 'Thu', temperature: '10', condition: 'cloudy', icon: 'https://openweathermap.org/img/wn/04d@2x.png' },
+];
 </script>
 
 <style scoped>
-/* Optional: custom styles */
+/* Optional: add background color or fine-tuning here */
 </style>

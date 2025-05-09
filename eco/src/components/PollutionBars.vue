@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-white shadow rounded-lg p-4" style="width: 500px; height: 300px;"> 
+  <div class="bg-white shadow-xl rounded-lg p-4 text-3xl" style="width: 500px; height: 300px;"> 
     <h2 class="font-bold mb-2">Pollution</h2>
     <BarChart :chart-data="chartData" :chart-options="chartOptions" class="h-32" />
-    <div class="flex justify-around text-xs text-gray-500 mt-2">
-      <span>All</span><span>Men</span><span>Women</span>
+    <div class="flex justify-around text-3xl text-gray-500 mt-2">
+      <span>Air</span><span>Water</span><span>Smell</span>
     </div>
   </div>
 </template>
