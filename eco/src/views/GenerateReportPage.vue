@@ -1,4 +1,5 @@
 <template>
+  <SideNavBar>
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
       <div class="bg-white p-10 rounded-2xl shadow-md w-full max-w-md text-center">
         <h1 class="text-2xl font-semibold text-purple-700 mb-8">Generate Reports</h1>
@@ -35,9 +36,11 @@
         </button>
       </div>
     </div>
+  </SideNavBar>
   </template>
   
   <script setup>
+  import SideNavBar from '../components/SideNavBar.vue'
   import { ref } from 'vue'
   
   const selectedLocation = ref('')

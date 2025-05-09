@@ -6,9 +6,8 @@
           EcoWatch
         </div>
         <nav class="flex-1 p-4 space-y-2">
-          <a href="#" class="block px-3 py-2 rounded hover:bg-purple-300">Dashboard</a>
-          <a href="#" class="block px-3 py-2 rounded hover:bg-purple-300">Analytics</a>
-          <a href="#" class="block px-3 py-2 rounded hover:bg-purple-300">Reports</a>
+          <a href="/" class="block px-3 py-2 rounded hover:bg-purple-300">Dashboard</a>
+          <a href="/reports" class="block px-3 py-2 rounded hover:bg-purple-300">Reports</a>
           <a href="#" class="block px-3 py-2 rounded hover:bg-purple-300">Settings</a>
         </nav>
         <div class="p-4 border-t border-purple-600">

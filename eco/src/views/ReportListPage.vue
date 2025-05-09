@@ -1,4 +1,5 @@
 <template>
+  <SideNavBar>
     <div class="p-6">
       <h1 class="text-2xl font-semibold text-purple-700 mb-4">Report Lists</h1>
   
@@ -74,9 +75,11 @@
   </button>
       </div>
     </div>
+  </SideNavBar>
   </template>
   
   <script setup>
+  import SideNavBar from '../components/SideNavBar.vue'
   import { ref, computed } from 'vue'
   
   const search = ref('')

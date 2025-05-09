@@ -1,4 +1,5 @@
 <template>
+  <SideNavBar>
     <div class="min-h-screen bg-gray-100 p-6 flex flex-col items-center justify-start">
       <div class="bg-white w-full max-w-3xl p-8 rounded-2xl shadow-md text-center">
         <h1 class="text-2xl md:text-3xl font-bold text-black mb-6">
@@ -29,9 +30,11 @@
         </button>
       </div>
     </div>
+  </SideNavBar>
   </template>
   
   <script setup>
+  import SideNavBar from '../components/SideNavBar.vue'
   import { ref, computed } from 'vue'
   
   // Sample data (this would likely come from props or an API)
